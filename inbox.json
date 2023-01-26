@@ -1,0 +1,126 @@
+{
+    "name": "INBOX",
+    "children":[
+        {
+            "name": "UNREAD",
+            "children": [
+                {"name": "ACCOUNTS GOOGLE",
+                 "children": [
+                    {"name": "BEVEILIGINSGMELDING", "size":0.011333465576171875},
+                    {"name": "BEVEILIGINSGMELDING", "size":0.011330604553222656},
+                    {"name": "BEVEILIGINSGMELDING", "size":0.011323928833007812},
+                    {"name": "BEVEILIGINSGMELDING", "size":0.01132965087890625},
+                    {"name": "BEVEILIGINSGMELDING", "size":0.011333465576171875},
+                    {"name": "BEVEILIGINSGMELDING", "size":0.011374473571777344},
+                    {"name": "BEVEILIGINSGMELDING", "size":0.011369705200195312},
+                    {"name": "BEVEILIGINSGMELDING", "size":0.011467933654785156},
+                    {"name": "CONTROLEER DE PRIVACYINSTELLINGEN...", "size":0.011469841003417969}
+                 ] },
+                {"name": "QUORA",
+                 "children":[
+                    {"name": "WHAT DO YOU...", "size":0.09106731414794922},
+                    {"name": "UKRAINE'S DEFEAT IS...", "size":0.09055042266845703},
+                    {"name": "WHY IS TOM...", "size":0.09127330780029297},
+                    {"name": "HOW COULD CITIES...", "size":0.09215927124023438},
+                    {"name": "HOW EASY IS...", "size":0.09133052825927734},
+                    {"name": "WHY DID AUSTRALIA...", "size":0.0883951187133789},
+                    {"name": "WHY DOES THE...", "size":0.09141826629638672},
+                    {"name": "MY BOYFRIEND IS...", "size":0.09027767181396484},
+                    {"name": "MY TEENAGER WANTS...", "size":0.09051036834716797},
+                    {"name": "WAAROM ZIJN MENSEN...", "size":0.08663368225097656},
+                    {"name": "WHAT CAN HIGH...", "size":0.09126758575439453},
+                    {"name": "I RECEIVED 68...", "size":0.0949850082397461},
+                    {"name": "HOW DO NARCISSISTS...", "size":0.090240478515625},
+                    {"name": "IF AN INTERVIEWER...", "size":0.09088706970214844},
+                    {"name": "IF U CALL...", "size":0.08973884582519531},
+                    {"name": "WHAT ARE THE...", "size":0.03659343719482422},
+                    {"name": "I HAVE RECEIVED...", "size":0.08914566040039062},
+                    {"name": "IS PELE RIGHT", "size":0.08896732330322266}
+                 ]},
+                {"name": "ANDRIODPLANET",
+                 "childeren": [
+                    {"name": "ONEPLUS 10T VIJF...", "size":0.10381603240966797},
+                    {"name": "DE 4 BESTE...", "size":0.09897327423095703},
+                    {"name": "10 MANIEREN OM...", "size":0.1036977767944336},
+                    {"name": "DE 4 BESTE...", "size":0.10822677612304688}
+                 ]}
+            ]
+        },
+        {
+            "name": "PROMOTION",
+            "children": [
+                {"name": "ANDRIODPLANET",
+                 "children": [
+                    {"name": "MOTOROLA VERNIEUWT MOTO...", "size":0.10829830169677734},
+                    {"name": "DEZE STEAMINGDIENSTEN BIEDEN...", "size":0.10411548614501953},
+                    {"name": "DE 4 BESTE...", "size":0.09412574768066406},
+                    {"name": "SAMSUNG GALAXY S23...", "size":0.1417255401611328},
+                    {"name": "VAARWEL WAZIGE FOTO’S...", "size":0.10407447814941406},
+                    {"name": "4 WENSEN VOOR...", "size":0.09907054901123047},
+                    {"name": "5 STREAMINGTIPS OM...", "size":0.10379600524902344},
+                    {"name": "OP DEZE DATUM...", "size":0.14151668548583984},
+                    {"name": "EEN NIEUWE CHROMECAST...", "size":0.1088571548461914},
+                    {"name": "WEGRIJDEN MET ALLEEN...", "size":0.104248046875},
+                    {"name": "ZO ZET JE...", "size":0.10370826721191406},
+                    {"name": "NOWATCH REVIEW: SCHERMLOZE...", "size":0.10381793975830078},
+                    {"name": "UPDATEPROBLMENEN VOOR SAMSUNGU", "size":0.13648223876953125},
+                    {"name": "MOTOROLA THINKPHONE SNELLE...", "size":0.10892868041992188},
+                    {"name": "MOTOROLA THINKPHONE SNELLE...", "size":0.10878372192382812},
+                    {"name": "ONEPLUS 11 VS...", "size":0.1085519790649414},
+                    {"name": "DIT ZIJN DE...", "size":0.103515625},
+                    {"name": "SMARTPHONES IN 2023...", "size":0.1037454605102539},
+                    {"name": "DE 3 BESTE...", "size":0.10346221923828125},
+                    {"name": "ZO ZIET DE...", "size":0.14346790313720703},
+                    {"name": "ANDROID PLANET STREAMINGAWARDS...", "size":0.1084127426147461},
+                    {"name": "WAAROM DE GOOGLE...", "size":0.10372066497802734},
+                    {"name": "CHROMECAST UPDATES: ZO...", "size":0.10848331451416016},
+                    {"name": "WAAROM DE GOOGLE...", "size":0.10882759094238281},
+                    {"name": "WAAROM DE ASUS...", "size":0.08460617065429688},
+                    {"name": "DE 4 BESTE...", "size":0.0991973876953125},
+                    {"name": "SCHRAPT SAMSUNG DEZE...", "size":0.14240550994873047},
+                    {"name": "KIJK NU: GLASS...", "size":0.10888290405273438},
+                    {"name": "ROUND-UP DE...", "size":0.10397148132324219},
+                    {"name": "REVIEW-UPDATE VIAPLAY...", "size":0.10842418670654297},
+                    {"name": "BESTE GREENG, BEVESTIGD...", "size":0.10366058349609375}
+                 ]},
+                {"name": "QUORA",
+                 "children": [
+                    {"name": "IF RUSSIA NUKES...", "size":0.08917903900146484},
+                    {"name": "WHO ARE THE...", "size":0.09040164947509766},
+                    {"name": "WHY IS EVERYONE...", "size":0.0889577865600586},
+                    {"name": "WHAT DETAILS DID...", "size":0.08925724029541016},
+                    {"name": "I'M 29. IS...", "size":0.0913686752319336},
+                    {"name": "AS A WAITER...", "size":0.08795928955078125},
+                    {"name": "I FAKED THE...", "size":0.09088802337646484}
+                 ]},
+                {"name": "THE VERGE",
+                 "children": [
+                    {"name": "COMMAND LINE: INSIDE...", "size":0.029317855834960938},
+                    {"name": "THANKS FOR BEING...", "size":0.020562171936035156}
+                 ]}
+            ]
+        },
+        {
+            "name": "UPDATES",
+            "children": [
+                {"name": "ANDRIODPLANET",
+                 "children": [
+                    {"name": "ZO MAAK JE...", "size":0.10345745086669922}
+                 ]},
+                {"name": "ACCOUNTS GOOGLE",
+                 "children": [
+                    {"name": "BEVEILIGINSGMELDING", "size":0.011330604553222656},
+                    {"name": "BEVEILIGINSGMELDING", "size":0.011377334594726562},
+                    {"name": "HERSTELMAILADRES GEVERIFIEERD VOOR...", "size":0.011410713195800781},
+                    {"name": "BEVEILIGINSGMELDING", "size":0.011750221252441406}
+
+                 ]},
+                {"name": "GOOGLE",
+                 "children": [
+                    {"name":"WELCOME TO YOUR...", "size":0.03299713134765625},
+                    {"name":"GREEN, NEEM DE...", "size":0.0646047592163086}
+                 ]}
+            ]
+        }
+    ]
+}

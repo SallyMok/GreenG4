@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green G Team4</title>
+  
+
+</head>
+
+<body>
+
+  <header>
+
+    <section class="container">
+      <div class="child">
+        <img src="./images/mark.png" alt="Tech Track logo" />
+
+        <p> Wist je dat jouw mailbox <span class="co2"></span> uitstoot per jaar?!</p>
+      </div>
+
+      <div class="child">
+  
+          <button class="blue">Opschonen</button>
+        </div>
+      </section>
+
+  </header>
+  <main>
+
+    <form>
+
+      <button class="closebut" id="closebut" type="button"></button>
+      
+      <div class="mySlides">
+        <video id="myMovie" style="max-width: 100%; cursor: pointer;">        <source src="/images/video.mp4"/></video>
+        <div class="cover"></div>
+      </div>
+      
+      
+      <div class="mySlides">
+
+        <div class="formContainer">
+          
+          <section class="formchild">
+          <div id="chart"></div>
+
+          </section>
+          <section class="formchild">
+            <h3>Dit is de ecologische voetafdruk van jouw mailbox</h3>
+            <h2>Uitsoot CO2</h2>
+            <div id="value">0</div>
+
+
+            <img src="images/voetafdruk.png" alt="voet">
+            <img src="images/graph.png" alt="graph">
+          </section>
+        </div>
+
+      </div>
+      <div class="mySlides">
+        <div id="chart1"></div>
+        <img class="navimg" src="/images/nav.png" alt="">
+        <div class="chartContainer">
+          <section class="barchart" id="b1">
+
+            <img src="images/barchart1.png" alt="barchart1">
+            <input type="checkbox" id="remember" type="checkbox" onclick="validate()">
+
+          </section>
+          <section class="barchart" id="b2">
+
+            <img src="images/barchart2.png" alt="barchart2">
+            <input type="checkbox" id="remember2" type="checkbox" onclick="validate()">
+
+          </section>
+
+          <section class="barchart" id="b3">
+
+            <img src="images/bartchart3.png" alt="barchart3">
+            <input type="checkbox">
+
+          </section>
+
+        </div>
+        <div class="prullenbak">
+          <img src="images/emptybin.png" alt="bin" id="bin">
+          <img src="images/CO2del.png" alt="co2" id="co2">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <img class="kg" src="/images/kg.png" alt="">
+        <div class="popup" id="popUp">
+          <span class="overlaypop"></span>
+          <div class="message-popup">
+            <h2>Wat gebeurd er als ik op Delete klik?</h2>
+            <p>De E-mails eindigen in de prullenbak. Als je denkt dat je een fout hebt gemaakt, kan je ze altijd nog 30
+              dagen terugvinden in de <span>prullenbak</span>.</p>
+            <img src="images/fullbin.png" alt="full">
+            <button>Begrepen</button>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="mySlides"></div>
+
+
+      <button class="butleft" type="button" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="butright" type="button" onclick="plusDivs(1)">&#10095;</button>
+
+    </form>
+
+
+  </main>
+
+  
+  <p class="gmail">Gmail API Quickstart</p>
+  <!--Add buttons to initiate auth sequence and sign out-->
+  <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+  <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+  <pre id="content" style="white-space: pre-wrap;"></pre>
+  <script type="text/javascript">
+
+
+  function loadVideo(){
+      myMovie=document.getElementById('myMovie');
+      myMovie.addEventListener('click', playOrPause, false);
+  }
+  function playOrPause() {
+      if (!myMovie.paused && !myMovie.ended){
+          myMovie.pause();
+      } else {
+          myMovie.play();
+      }
+  }
+  window.addEventListener('load',loadVideo,false);
+
+
+    var slideIndex = 1;
+      showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName('mySlides');
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = 'none';
+      }
+      x[slideIndex - 1].style.display = 'block';
+    }
+
+    function validate() {
+    if (remember.checked == 1) {
+      document.getElementById('bin').src = 'images/fullbin.png';
+      document.getElementById('b1').classList.add('checked');
+      document.getElementById('co2').classList.add('co2animation');
+    } else {
+      document.getElementById('bin').src = 'images/emptybin.png';
+      document.getElementById('b1').classList.remove('checked');
+      document.getElementById('co2').classList.remove('co2animation');
+    }
+  }
+
+    /* exported gapiLoaded */
+    /* exported gisLoaded */
+    /* exported handleAuthClick */
+    /* exported handleSignoutClick */
+    // TODO(developer): Set to client ID and API key from the Developer Console
+    const CLIENT_ID = '613289972072-18jekhto92r4sdvs3e32rfedau0qo103.apps.googleusercontent.com';
+    const API_KEY = 'AIzaSyCIf2-Je3T-HfiYtALvmLeyOmA--3Xs9tc';
+    // Discovery doc URL for APIs used by the quickstart
+    const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest';
+    // Authorization scopes required by the API; multiple scopes can be
+    // included, separated by spaces.
+    const SCOPES = 'https://www.googleapis.com/auth/gmail.readonly';
+    let tokenClient;
+    let gapiInited = false;
+    let gisInited = false;
+    let rawResults = [];
+    let sunburstData = {};
+    const authorizeBtn = document.querySelector('#authorize_button');
+    const signOutBtn = document.querySelector('#signout_button');
+    document.getElementById('authorize_button').style.visibility = 'hidden';
+    document.getElementById('signout_button').style.visibility = 'hidden';
+    /**
+     * Callback after api.js is loaded.
+     */
+    function gapiLoaded() {
+      gapi.load('client', initializeGapiClient);
+    }
+    /**
+     * Callback after the API client is loaded. Loads the
+     * discovery doc to initialize the API.
+     */
+    async function initializeGapiClient() {
+      await gapi.client.init({
+        apiKey: API_KEY,
+        discoveryDocs: [DISCOVERY_DOC],
+      });
+      gapiInited = true;
+      maybeEnableButtons();
+    }
+    /**
+     * Callback after Google Identity Services are loaded.
+     */
+    function gisLoaded() {
+      tokenClient = google.accounts.oauth2.initTokenClient({
+        client_id: CLIENT_ID,
+        scope: SCOPES,
+        callback: '', // defined later
+      });
+      gisInited = true;
+      maybeEnableButtons();
+    }
+    /**
+     * Enables user interaction after all libraries are loaded.
+     */
+    function maybeEnableButtons() {
+      if (gapiInited && gisInited) {
+        document.getElementById('authorize_button').style.visibility = 'visible';
+      }
+    }
+    /**
+     *  Sign in the user upon button click.
+     */
+    function handleAuthClick() {
+      tokenClient.callback = async (resp) => {
+        if (resp.error !== undefined) {
+          throw (resp);
+        }
+        document.getElementById('signout_button').style.visibility = 'visible';
+        document.getElementById('authorize_button').innerText = 'Refresh';
+        localStorage.setItem('token', gapi.client.getToken().access_token);
+        token = localStorage.getItem('token');
+        emails = await listAllEmails(token, 'category:promotions');
+        sizeofInbox = await getEmailsInformation(token, emails);
+        console.log(sizeofInbox, "size of inbox");
+        console.log(`${parseFloat(sizeofInbox / 1048576).toFixed(2)}MB`)
+        console.log(`${parseFloat((sizeofInbox / 1048576) * 2.26 / 1000).toFixed(2)} kilograms of CO2 per year`);
+      };
+      if (gapi.client.getToken() === null) {
+        // Prompt the user to select a Google Account and ask for consent to share their data
+        // when establishing a new session.
+        tokenClient.requestAccessToken({ prompt: 'consent' });
+      } else {
+        // Skip display of account chooser and consent dialog for an existing session.
+        tokenClient.requestAccessToken({ prompt: '' });
+      }
+    }
+    /**
+     *  Sign out the user upon button click.
+     */
+    function handleSignoutClick() {
+      if (token !== null) {
+        google.accounts.oauth2.revoke(token.access_token);
+        gapi.client.setToken('');
+        document.getElementById('content').innerText = '';
+        document.getElementById('authorize_button').innerText = 'Authorize';
+        document.getElementById('signout_button').style.visibility = 'hidden';
+      }
+    }
+    async function listAllEmails(token, query) {
+      const params = {
+        method: 'GET',
+        q: query,
+        headers: {
+          Authorization: 'Bearer ' + token,
+          'Content-Type': 'application/json',
+        }
+      };
+      var previousResponse = await doFetch("https://gmail.googleapis.com/gmail/v1/users/me/messages", "", [], params);
+      return previousResponse
+    }
+    async function getEmailsInformation(token, messages) {
+      sizes = [];
+      body = "";
+      i = 1;
+      limit = messages.length - (messages.length * 0.25);
+      const regex = /(?<="sizeEstimate":.)[0-9]*/gi
+      console.log('Limit: ', limit)
+      while (messages.length > 0) {
+        body = body.concat(`--batch_boundary\r\nContent-Type:application/http\r\n\r\nGET /gmail/v1/users/me/messages/${messages[0].id}?fields=sizeEstimate,labelIds,payload.headers\r\n\r\n`);
+        messages.shift();
+        i++;
+        if (i >= 20) {
+          console.log("meer dan 20");
+          body = body.concat('--batch_boundary--');
+          const response = await batchGet(body, token);
+          const text = await response.text();
+          parseBatchResponse(text);
+          const sizeEstimates = await text.match(regex);
+          if (sizeEstimates != null) {
+            sizes = sizes.concat(sizeEstimates);
+          }
+          console.log('Amount of sizes in list: ', sizes.length)
+          body = "";
+          i = 0;
+        }
+      }
+      filterRawResults(rawResults);
+      const totalSizeEstimate = sizes.reduce((acc, value) => {
+        return acc + parseInt(value);
+      }, 0);
+      return totalSizeEstimate;
+    }
+    function batchGet(body, token) {
+      console.log("batch get");
+      token = localStorage.getItem('token');
+      console.log(body, token, "body en token in batchGet functie")
+      const params = {
+        method: 'POST',
+        headers: {
+          Authorization: 'Bearer ' + token,
+          'Content-Type': 'multipart/mixed; boundary=batch_boundary',
+        },
+        body: body
+      };
+      return fetch('https://www.googleapis.com/batch/gmail/v1', params)
+    }
+    function doFetch(url = "https://gmail.googleapis.com/gmail/v1/users/me/messages",
+      pageToken = "",
+      previousResponse = [],
+      params) {
+      return fetch(`${url}?pageToken=${pageToken}&maxResults=${500}`, params)
+        .then(response => response.json())
+        .then(data => {
+          previousResponse = previousResponse.concat(data.messages);
+          if (data.nextPageToken) {
+            return doFetch("https://gmail.googleapis.com/gmail/v1/users/me/messages", data.nextPageToken, previousResponse, params)
+          } else {
+            return previousResponse;
+          }
+        });
+    }
+    function parseBatchResponse(response) {
+      const lines = response.split('\r\n');
+      for (const line of lines) {
+        if (line[0] === '{') {
+          rawResults.push(JSON.parse(line));
+        }
+      }
+    };
+    function filterRawResults(results) {
+      //Create a new array of objects of each message with the information I want
+      let filteredResults = results.map((result) => {
+        return {
+          category: result.labelIds[0],
+          inbox: result.labelIds.find((id) => id.includes("INBOX")),
+          name: Object.values(result.payload.headers).find(
+            (obj) => obj.name === "From")?.value.split('<')[0].trim(),
+          company: Object.values(result.payload.headers).find(
+            (obj) => obj.name === "From")?.value.match(/@(.*?)>/)[1],
+          size: (result.sizeEstimate / 1048576),
+          subject: Object.values(result.payload.headers).find(
+            (obj) => obj.name === "Subject")?.value.trim(),
+        };
+      });
+      groupByCategoryResults(filteredResults, 'category');
+    }
+    function groupByCategoryResults(results, query) {
+      let uniqueValues = [...new Set(results.map(x => x[query]))];
+      let categorizedResults =
+      {
+        name: "sunburst",
+        children: uniqueValues.map((val) => {
+          return {
+            name: val,
+            children: results.filter((x) => x[query] === val)
+          }
+        })
+      }
+      groupByCompanyResults(categorizedResults);
+    }
+    function groupByCompanyResults(results) {
+      let categorizeByCompanyResults = results.children.map(item => {
+        let newSubArray = {};
+        for (let i = 0; i < item.children.length; i++) {
+          let company = item.children[i].company;
+          if (!newSubArray[company]) {
+            newSubArray[company] = []
+          }
+          newSubArray[company].push(item.children[i]);
+        }
+        let finalArray = [];
+        for (let company in newSubArray) {
+          finalArray.push({ name: company, children: newSubArray[company] });
+        }
+        item.children = finalArray;
+        return item;
+      });
+      console.log(categorizeByCompanyResults, "comp");
+      let sunburstData = {
+        name: "Sunburst",
+        children: categorizeByCompanyResults
+      }
+      console.log(sunburstData, "sunburstdata")
+    }
+
+
+  </script>
+  <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+  <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+  <script type="module" src="./scripts/main.js"></script>
+  <script src="//unpkg.com/d3"></script>
+  <script src="//unpkg.com/sunburst-chart"></script>
+  
+
+</body>
+
+</html>
